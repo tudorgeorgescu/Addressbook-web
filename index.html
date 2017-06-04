@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+	<meta charset="UTF-8">
+	<title>Tudor's Backbone APP</title>
+</head>
+<body>
+	<div class="container">
+		<h1>Tudor's Backbone App</h1>
+
+		<table class="table">
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Surname</th>
+					<th>Age</th>
+					<th>Action</th>
+				</tr>
+				<tr>
+					<td><input class="form-control name-input"></td>
+					<td><input class="form-control surname-input"></td>
+					<td><input class="form-control age-input"></td>
+					<td><button class="btn btn-primary add-user">Add</button></td>
+				</tr>
+			</thead>
+			<tbody class="users-list"></tbody>
+		</table>
+	</div>
+
+	<script type="text/template" class="users-list-template">
+	<td><span class="name"><%= name %></span></td>
+	<td><span class="surname"><%= surname %></span></td>
+	<td><span class="age"><%= age %></span></td>
+	<td><button class="btn btn-warning edit-user">Edit</button> <button class="btn btn-danger delete-user">Delete</button><button class="btn btn-success update-user" style="display:none">Update</button> <button class="btn btn-danger cancel" style="display:none">Cancel</button></td>
+
+	</script>
+	
+	<script src="bower_components/jquery/dist/jquery.js"></script>
+	<script src="bower_components/underscore/underscore.js"></script>
+	<script src="bower_components/backbone/backbone.js"></script>
+	<script src="addressbook.js"></script>
+</body>
+</html>
